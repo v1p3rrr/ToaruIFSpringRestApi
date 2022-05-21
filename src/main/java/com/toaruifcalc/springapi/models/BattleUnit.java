@@ -4,7 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties
 @Entity
 public class BattleUnit implements Serializable {
 
@@ -32,8 +34,9 @@ public class BattleUnit implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public BattleUnit(String charName) {
+    public BattleUnit(String charName, String cardName) {
         this.charName=charName;
+        this.cardName=cardName;
     }
 
     public void setCharName(String charName) {

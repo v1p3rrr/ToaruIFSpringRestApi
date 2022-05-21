@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/battleunits")
@@ -29,13 +30,18 @@ public class BattleUnitController {
     }
 
     @GetMapping("/getunit")
-    public BattleUnit getUnitById(@RequestParam Long id){
+    public Optional<BattleUnit> getUnitById(@RequestParam Long id){
         return battleUnitService.getUnit(id);
     }
 
     @PostMapping("/setrandomunit")
     public Long setNewUnit(){
-        return battleUnitService.addUnit(new BattleUnit("abobus"));
+        return battleUnitService.addUnit(new BattleUnit("abobus", "amogus"));
+    }
+
+    @PostMapping("/deleteunit")
+    public void deleteUnit(@RequestParam Long id){
+        battleUnitService.deleteUnit(id);
     }
 
 }

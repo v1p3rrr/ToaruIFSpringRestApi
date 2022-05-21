@@ -5,7 +5,9 @@ import com.toaruifcalc.springapi.repository.BattleUnitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BattleUnitService {
@@ -26,7 +28,11 @@ public class BattleUnitService {
         return battleUnitRepository.saveAndFlush(battleUnit).getId();
     }
 
-    public BattleUnit getUnit(Long id){
-        return battleUnitRepository.getById(id);
+    public Optional<BattleUnit> getUnit(Long id){
+        return battleUnitRepository.findById(id);
+    }
+
+    public void deleteUnit(Long id) {
+        battleUnitRepository.deleteById(id);
     }
 }

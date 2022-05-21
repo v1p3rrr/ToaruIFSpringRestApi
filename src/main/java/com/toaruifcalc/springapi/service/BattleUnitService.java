@@ -29,10 +29,17 @@ public class BattleUnitService {
     }
 
     public Optional<BattleUnit> getUnit(Long id){
+        if (id == -1){
+            return getFirstUnit();
+        }
         return battleUnitRepository.findById(id);
     }
 
     public void deleteUnit(Long id) {
         battleUnitRepository.deleteById(id);
+    }
+
+    public Optional<BattleUnit> getFirstUnit(){
+        return battleUnitRepository.findFirstBy();
     }
 }

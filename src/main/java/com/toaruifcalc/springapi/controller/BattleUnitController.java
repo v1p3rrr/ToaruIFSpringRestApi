@@ -44,4 +44,9 @@ public class BattleUnitController {
         battleUnitService.deleteUnit(id);
     }
 
+    @GetMapping("/getfirstunit")
+    public Optional<BattleUnit> getFirstUnit(){
+        return battleUnitService.getFirstUnit();
+    }
+
 }

@@ -28,6 +28,11 @@ public class BattleUnitService {
         return battleUnitRepository.saveAndFlush(battleUnit).getId();
     }
 
+    public List<BattleUnit> addMultipleUnit(List<BattleUnit> battleUnits){
+        //battleUnitRepository.save(battleUnit);
+        return battleUnitRepository.saveAllAndFlush(battleUnits);
+    }
+
     public Optional<BattleUnit> getUnit(Long id){
         if (id == -1){
             return getFirstUnit();

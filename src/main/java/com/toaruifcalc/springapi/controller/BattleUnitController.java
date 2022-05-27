@@ -29,6 +29,11 @@ public class BattleUnitController {
         return battleUnitService.addUnit(battleUnit);
     }
 
+    @PostMapping("/setmultipleunits")
+    public List<BattleUnit> setMultipleUnit(@RequestBody List<BattleUnit> battleUnits){
+        return battleUnitService.addMultipleUnit(battleUnits);
+    }
+
     @GetMapping("/getunit")
     public Optional<BattleUnit> getUnitById(@RequestParam Long id){
         return battleUnitService.getUnit(id);

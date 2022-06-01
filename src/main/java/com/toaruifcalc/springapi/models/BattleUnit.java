@@ -69,6 +69,8 @@ public class BattleUnit implements Serializable {
 
     String imageBias;
 
+    String imageSecondUrl;
+
     String color;
     String primaryAttack;
 
@@ -103,12 +105,13 @@ public class BattleUnit implements Serializable {
     String passive2Activation;
     String passive2Flat;
 
-    public BattleUnit(Long id, String charName, String cardName, String imageUrl, String imageBias, String color, String primaryAttack, int skillAtkMultiplier, int skillBonusMagic, int skillBonusScience, int spAtkMultiplier, String spBonusType, int spBonusMultiplier, String passive1Type, String passive1Activation, String passive1Flat, String passive2Type, String passive2Activation, String passive2Flat) {
+    public BattleUnit(Long id, String charName, String cardName, String imageUrl, String imageBias, String imageSecondUrl, String color, String primaryAttack, int skillAtkMultiplier, int skillBonusMagic, int skillBonusScience, int spAtkMultiplier, String spBonusType, int spBonusMultiplier, String passive1Type, String passive1Activation, String passive1Flat, String passive2Type, String passive2Activation, String passive2Flat) {
         this.id = id;
         this.charName = charName;
         this.cardName = cardName;
         this.imageUrl = imageUrl;
         this.imageBias = imageBias;
+        this.imageSecondUrl = imageSecondUrl;
         this.color = color;
         this.primaryAttack = primaryAttack;
         this.skillAtkMultiplier = skillAtkMultiplier;
@@ -125,11 +128,12 @@ public class BattleUnit implements Serializable {
         this.passive2Flat = passive2Flat;
     }
 
-    public BattleUnit(String charName, String cardName, String imageUrl, String imageBias, String color, String primaryAttack, int skillAtkMultiplier, int skillBonusMagic, int skillBonusScience, int spAtkMultiplier, String spBonusType, int spBonusMultiplier, String passive1Type, String passive1Activation, String passive1Flat, String passive2Type, String passive2Activation, String passive2Flat) {
+    public BattleUnit(String charName, String cardName, String imageUrl, String imageBias,  String imageSecondUrl, String color, String primaryAttack, int skillAtkMultiplier, int skillBonusMagic, int skillBonusScience, int spAtkMultiplier, String spBonusType, int spBonusMultiplier, String passive1Type, String passive1Activation, String passive1Flat, String passive2Type, String passive2Activation, String passive2Flat) {
         this.charName = charName;
         this.cardName = cardName;
         this.imageUrl = imageUrl;
         this.imageBias = imageBias;
+        this.imageSecondUrl = imageSecondUrl;
         this.color = color;
         this.primaryAttack = primaryAttack;
         this.skillAtkMultiplier = skillAtkMultiplier;
@@ -260,6 +264,14 @@ public class BattleUnit implements Serializable {
 
     public String getPassive2Flat() {
         return passive2Flat;
+    }
+
+    public String getImageSecondUrl() {
+        return imageSecondUrl;
+    }
+
+    public void setImageSecondUrl(String imageSecondUrl) {
+        this.imageSecondUrl = imageSecondUrl;
     }
 
     public void setPassive2Flat(String passive2Flat) {

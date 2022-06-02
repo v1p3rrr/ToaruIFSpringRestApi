@@ -39,11 +39,6 @@ public class BattleUnitController {
         return battleUnitService.getUnit(id);
     }
 
-    @PostMapping("/setrandomunit")
-    public Long setNewUnit(){
-        return battleUnitService.addUnit(new BattleUnit("abobus", "amogus"));
-    }
-
     @PostMapping("/deleteunit")
     public void deleteUnit(@RequestParam Long id){
         battleUnitService.deleteUnit(id);

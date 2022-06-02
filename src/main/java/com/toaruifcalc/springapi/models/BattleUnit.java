@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 @JsonIgnoreProperties
 @Entity
 public class BattleUnit implements Serializable {
@@ -75,13 +76,13 @@ public class BattleUnit implements Serializable {
     String primaryAttack;
 
     int skillAtkMultiplier;
-    float skillBonusMagic;
-    float skillBonusScience;
+    Float skillBonusMagic;
+    Float skillBonusScience;
 
 
     int spAtkMultiplier;
     String spBonusType;
-    float spBonusMultiplier;
+    Float spBonusMultiplier;
 
 
     // alternative
@@ -105,7 +106,7 @@ public class BattleUnit implements Serializable {
     String passive2Activation;
     String passive2Flat;
 
-    public BattleUnit(Long id, String charName, String cardName, String imageUrl, String imageBias, String imageSecondUrl, String color, String primaryAttack, int skillAtkMultiplier, float skillBonusMagic, float skillBonusScience, int spAtkMultiplier, String spBonusType, float spBonusMultiplier, String passive1Type, String passive1Activation, String passive1Flat, String passive2Type, String passive2Activation, String passive2Flat) {
+    public BattleUnit(Long id, String charName, String cardName, String imageUrl, String imageBias, String imageSecondUrl, String color, String primaryAttack, int skillAtkMultiplier, Float skillBonusMagic, Float skillBonusScience, int spAtkMultiplier, String spBonusType, Float spBonusMultiplier, String passive1Type, String passive1Activation, String passive1Flat, String passive2Type, String passive2Activation, String passive2Flat) {
         this.id = id;
         this.charName = charName;
         this.cardName = cardName;
@@ -128,7 +129,7 @@ public class BattleUnit implements Serializable {
         this.passive2Flat = passive2Flat;
     }
 
-    public BattleUnit(String charName, String cardName, String imageUrl, String imageBias,  String imageSecondUrl, String color, String primaryAttack, int skillAtkMultiplier, float skillBonusMagic, float skillBonusScience, int spAtkMultiplier, String spBonusType, float spBonusMultiplier, String passive1Type, String passive1Activation, String passive1Flat, String passive2Type, String passive2Activation, String passive2Flat) {
+    public BattleUnit(String charName, String cardName, String imageUrl, String imageBias,  String imageSecondUrl, String color, String primaryAttack, int skillAtkMultiplier, Float skillBonusMagic, Float skillBonusScience, int spAtkMultiplier, String spBonusType, Float spBonusMultiplier, String passive1Type, String passive1Activation, String passive1Flat, String passive2Type, String passive2Activation, String passive2Flat) {
         this.charName = charName;
         this.cardName = cardName;
         this.imageUrl = imageUrl;
@@ -186,7 +187,7 @@ public class BattleUnit implements Serializable {
         return skillBonusMagic;
     }
 
-    public void setSkillBonusMagic(int skillBonusMagic) {
+    public void setSkillBonusMagic(Float skillBonusMagic) {
         this.skillBonusMagic = skillBonusMagic;
     }
 
@@ -194,7 +195,7 @@ public class BattleUnit implements Serializable {
         return skillBonusScience;
     }
 
-    public void setSkillBonusScience(int skillBonusScience) {
+    public void setSkillBonusScience(Float skillBonusScience) {
         this.skillBonusScience = skillBonusScience;
     }
 
@@ -218,7 +219,7 @@ public class BattleUnit implements Serializable {
         return spBonusMultiplier;
     }
 
-    public void setSpBonusMultiplier(int spBonusMultiplier) {
+    public void setSpBonusMultiplier(Float spBonusMultiplier) {
         this.spBonusMultiplier = spBonusMultiplier;
     }
 

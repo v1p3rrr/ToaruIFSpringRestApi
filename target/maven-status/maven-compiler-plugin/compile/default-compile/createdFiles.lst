@@ -1,0 +1,5 @@
+com\toaruifcalc\springapi\controller\BattleUnitController.class
+com\toaruifcalc\springapi\repository\BattleUnitRepository.class
+com\toaruifcalc\springapi\SpringApiApplication.class
+com\toaruifcalc\springapi\models\BattleUnit.class
+com\toaruifcalc\springapi\service\BattleUnitService.class
